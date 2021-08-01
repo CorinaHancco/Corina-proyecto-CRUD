@@ -1,7 +1,7 @@
 <h2>Lista de peliculas</h2>
 <ul>
   <li *ngFor="let movie of movies">
-    <h2>{{ movie.title }}</h2>
+    <h2 (click)="movieClicked(movie)">{{ movie.title }}</h2>
   </li>
 </ul>
 <router-outlet></router-outlet>

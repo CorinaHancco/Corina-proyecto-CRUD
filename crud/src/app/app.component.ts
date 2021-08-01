@@ -20,7 +20,10 @@ export class AppComponent {
        },
        error => {
          console.log(error);
-       }       
-     )
-   }
+      }       
+    )
+  }
+  movieClicked=(movie:any)=>{
+    console.log(movie.id);
+  }
 }
