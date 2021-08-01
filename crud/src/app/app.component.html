@@ -4,4 +4,8 @@
     <h2 (click)="movieClicked(movie)">{{ movie.title }}</h2>
   </li>
 </ul>
+<hr>
+Title: <input type="text"  [(ngModel)]="title"> <br>
+Descripcion: <input type="text"  [(ngModel)]="desc"> <br>
+Año: <input type="text"  [(ngModel)]="year"> <br>
 <router-outlet></router-outlet>
