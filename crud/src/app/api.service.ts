@@ -31,5 +31,8 @@ createMovie(movie:any):Observable<any>{
   const body = {title:movie.title,desc:movie.desc,year:movie.year};
   return this.http.post(this.baseurl + '/movies/',body,{headers: this.httpHeaders});
 }
- 
+
+deleteMovie(id:any):Observable<any>{
+  return this.http.delete(this.baseurl + '/movies/'+id+'/',{headers: this.httpHeaders});
+}
 }
