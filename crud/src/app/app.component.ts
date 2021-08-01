@@ -38,6 +38,13 @@ export class AppComponent {
   }
 
   updateMovie = ()=>{
-    
+    this.api.updateMovie(this.selectedMovie).subscribe(
+      data =>{
+        this.selectedMovie=data;
+      },
+      error => {
+        console.log(error);
+     }       
+   )
   }
 }
