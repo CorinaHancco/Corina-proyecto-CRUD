@@ -27,11 +27,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-#CORS_ORIGIN_WHITELIST = (
- #   'localhost:62887'
-#)
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:62887",
+    "http://localhost:4200",
 ]
 
 
