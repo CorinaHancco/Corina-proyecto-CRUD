@@ -9,12 +9,11 @@ import { ApiService } from './api.service';
 
 export class AppComponent {
   movies = [{title: 'test'}];
-  title:any;
-  desc:any;
-  year:any;
+  selectedMovie:any;
 
   constructor(private api:ApiService){
-    this.getMovies()
+    this.getMovies();
+    this.selectedMovie = {id:-1,title:'',desc:'',year:0}
   }
    getMovies = () =>{
      this.api.getAllMovies().subscribe(
@@ -30,13 +29,15 @@ export class AppComponent {
     //console.log(movie.id);
     this.api.getOneMovies(movie.id).subscribe(
       data =>{
-        this.title = data.title;
-         this.desc = data.desc;
-         this.year = data.year;
+        this.selectedMovie=data;
       },
       error => {
         console.log(error);
      }       
    )
+  }
+
+  updateMovie = ()=>{
+    
   }
 }

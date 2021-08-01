@@ -5,7 +5,8 @@
   </li>
 </ul>
 <hr>
-Title: <input type="text"  [(ngModel)]="title"> <br>
-Descripcion: <input type="text"  [(ngModel)]="desc"> <br>
-Año: <input type="text"  [(ngModel)]="year"> <br>
+Title: <input type="text"  [(ngModel)]="selectedMovie.title"> <br>
+Descripcion: <input type="text"  [(ngModel)]="selectedMovie.desc"> <br>
+Año: <input type="text"  [(ngModel)]="selectedMovie.year"> <br>
+<button (click)="updateMovie()">PUT</button>
 <router-outlet></router-outlet>
